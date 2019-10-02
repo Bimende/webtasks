@@ -1,60 +1,73 @@
-<!DOCTYPE html>
 <html>
 
 <head>
 
 <style>
 
-.person{
-  color:red;  
+body{
+  display: flex;
+  justify-content: flex-start;
+  width:100%;
+  height:100%;
+  margin: 0px;
 }
 
-.list {
-  border:1px solid red;
-    border-radius:20px;
-  font-size:30px;   
+.left_part{
+    background-color: darkred;
+    width:100%;
+    height:100%;
+    text-align: center;
+    padding-top: 250px;
+    font-size: 40px;
+    margin: 0px;
+    color:white;
+ }
+
+
+.right_part h3{
+  font-size: 40px;
+  text-align: center;
 }
 
-.list a{
-   text-decoration:none;  
+.right_part{
+  background-color:white;
+  width:100%;
+  height:100%;
+  padding-top: 10px;
 }
-
-.retake a{
-  color:red;
-    font-size:35px;
-}
-
 </style>
 
 </head>
 
 <body>
 
-<h1 style="color:green;">Admission leter</h1>
+<aside class="left_part">
 
-<div class="article">
+  <h1>Web Technologies</h1>
 
-Hello <span class="person">Mr. Jones</span><br/>
+</aside>
 
-Below are lessons that you are supposed to study
+<section class="right_part">
 
-</div>
+  <h3>Syllabus</h3>
 
-<div class="list">
+  <div class="">
 
-  <ul>
+    <ul>
 
-    <li><a href="#">Java</a></li>
+      <li><a href="#">Week #1</a> Introduction to HTML</li>
 
-    <li><a href="#">Math</a></li>
+      <li><a href="#">Week #2</a> CSS Basics</li>
 
-    <li class="retake"><a href="#">Linear Algebra</a></li>
+      <li><a href="#">Week #3</a> CSS Box model</li>
 
-  </ul>
+      <li><a href="#">Week #4</a> Flex box model</li>
 
-</div>
+    </ul>
 
-<a href="mailto:admission@sdu.edu.kz">Contact us</a>
+  </div>
+
+</section>
 
 </body>
 
