@@ -1,67 +1,121 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-
-<style>
-
-.letters{
-display:flex;
-border:solid 1px red;
-display:flex;
-flex-wrap:wrap;
-
-}
-
-.letters div{
+  <head>
+  <script>
+    function myFunction() {
+      var a1 = document.getElementById('s11').value;
+        var a2 = document.getElementById('s12').value;
+        var a3 = document.getElementById('s13').value;
+        var a4 = document.getElementById('s21').value;
+        var a5 = document.getElementById('s22').value;
+        var a6 = document.getElementById('s23').value;
+        var a7 = document.getElementById('s31').value;
+        var a8 = document.getElementById('s32').value;
+        var a9 = document.getElementById('s33').value;
+        var a = (a1*a5*a9 + a4*a8*a3+a7*a6*a2) - (a3*a5*a7 + a6*a8*a1+a9*a4*a2)
+        var b = "|A|=A(EI-FH)-B(DI-FG)+C(DH-EG)"
+        document.getElementById("resultOfWord1").innerHTML = a;
+        document.getElementById("resultOfWord2").innerHTML =b + "="+a;
+    }
+  </script>
+  <style>
+  body{
+    background:linear-gradient(to right,#dd4a68,#07a);
+  }
   
- border:solid 1px red;
- border-radius:50%;
- color:white;
- background-color:red;
- padding:1px;
- padding-top:2px;
- padding-bottom:2px;
- margin:5px;
- width:30px;
- text-align:center;
-}
+  
+    #matrix{
+      display:flex;
+      width:254px;
+      flex-wrap:wrap;
+        border:5px outset gray;
+       
+  }
+  #matrix input{
+      width:80px;
+      font-size:50px;
+  }
+  #resultWord{
+      position:absolute;
+        left:320px;
+        top:100px;
+      border: 1px solid:black;
+        border-radius:10px;
+        background-color:black;
+        width:80px;
+        text-align:center;
+      font-size:15px;
+      color:white;
+    }
+  #determinant{
+      font-size:24px;
+      
+  }
+    
+    #word{
+      font-size:15px;
+        position:absolute;
+        left:320px;
+        top:220px;
+    }
+    
+    #resultOfWord1{
+      font-size:25px;
+        position:absolute;
+        left:330px;
+        top:120px;
+        margin:10px;
+        height:50px;
+    }
+    
+     #resultOfWord2{
+      font-size:15px;
+        position:absolute;
+        left:330px;
+        top:170px;
+        margin:10px;
+        height:10px;
+    }
+    
+    
+  </style>
+  </head>
 
-
-</style>
-
-</head>
-
-<body>
-
-<div class="letters">
-
-  <div>A</div>
-
-  <div>B</div>
-
-  <div>C</div>
-
-  <div>D</div>
-
-  <div>E</div>
-
-  <div>F</div>
-
-  <div>G</div>
-
-  <div>H</div>
-
-  <div>I</div>
-
-  <div>J</div>
-
-  <div>K</div>
-
-  <div>L</div>
-
-</div>
-
-</body>
+  <body>
+    
+    <p>Task-1</p>
+    <h2>Calculate determinant of the given matrix:<h2> 
+    <div id="matrix">
+      <input type="text" id="s11"/>
+      <input type="text" id="s12"/>
+      <input type="text" id="s13"/>
+      <input type="text" id="s21"/>
+      <input type="text" id="s22"/>
+      <input type="text" id="s23"/>
+      <input type="text" id="s31"/>
+      <input type="text" id="s32"/>
+      <input type="text" id="s33"/>
+    </div>
+    <button onclick="myFunction()" id="determinant">Find determinant → </button>
+    
+    <div id="resultWord">Result:</div>
+    
+     <div id="resultOfWord1">
+        <p style="color:red;">NaN</p>
+     </div>
+     <div id="resultOfWord2">
+      <p>|A|=A(EI-FH)-B(DI-FG)+C(DH-EG)=NaN</p>
+     </div>
+     
+    <div id="word">
+      
+      <p>Definition:<br>In linear algebra, the determinant is a scalar      value that can be computed from the elements of a square matrix and     encodes certain properties of the linear transformation described by     the matrix. The determinant of a matrix A is denoted det(A), det A.      </p>
+        
+    </div>
+    
+    
+    
+  </body>
 
 </html>
